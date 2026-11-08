@@ -1,0 +1,81 @@
+# The Serotype-First Serology Table (2026-10-30)
+
+*Serotype-first: one row per pneumococcal serotype designation (the number-letter codes), with every piece of information Douglas's existing work holds about that serotype filled in — then a compact Part II for the meningococcal letter groups. Manuscript reference work only — NEVER medical advice. Panel values are filed as records; what they mean for any person belongs to his clinicians. Nothing here interprets any personal test result or illness.*
+
+**Tier tags throughout:** [D] documented · [H] his, filed as his · [H→D] his with documented foothold · [LOGIC] inference with explicit steps · [GAP] unknown.
+
+## How the letters work
+
+Pneumococcal codes are **number-letters**: a serogroup number plus a letter suffix that distinguishes capsular variants within the serogroup. The letter is chemistry, not decoration — 19A vs 19F differ in capsular polysaccharide linkage chemistry [D]. Plain-number serotypes on this panel carry no suffix: **1, 2, 3, 4, 5, 8, 14, 20** [D]. Serogroup 19 also has real **19B/19C**, on no panel and in no licensed vaccine [D — Serology book §5.4]. Meningococcal codes are **pure letters**: A, B, C, W, Y [D]. Both systems track capsule chemistry, not spelling — that is the Architecture essay's seam, applied here [D + H→D]. And the letters do not cross organisms [LOGIC — steps: no serogroup maps to any serotype (cross-reference boundary); different organisms carry different capsule chemistries; therefore a shared letter, e.g. meningococcal B and pneumococcal 6B, is coincidence, not kinship — never read it as a pairing].
+
+## Part I — The 23 pneumococcal serotypes, one row each
+
+**Value columns — read this first.** Oct 2025 flags: "on his line" = exactly 0.1 [H]; "≥0.2 group" [H]; "below his line" = <0.1 [H]; "lab line" = Mayo normal ≥1.0 mcg/mL [D]. The Oct 2026 column carries bare transcribed values only — no flags, no comparison, no clinical meaning.
+
+**Filing note:** the two value columns are separate documents from different labs and methods — Mayo PN23M (Oct 2025, ordered by Rick Klein, D.O.) vs Quest MAID/Luminex via OakLeaf/LABDAQ (Oct 2026, ordered by Erik Dickson, MD) — and sit side by side, not as one continuous series. The Oct 2026 panel is marked "Not yet reviewed by care team." Quest's "<0.3" entries are transcribed as printed; no equivalence with Mayo's "<0.1" is claimed.
+
+**Disease-row note column — what it holds, stated plainly:** the Most Advanced Table's disease rows do NOT break down to individual pneumococcal serotypes (verified: they say only "23 pneumo serotypes (Part II)"). So this column carries (a) §226 group-mediated qualifiers and (b) the Serology book's one-line per-serotype notes, each tagged. Where neither exists, GAP.
+
+| Serotype | Letter family | PN23M IgG Oct 2025 (Mayo, Klein) | PN23M IgG Oct 2026 (Quest/OakLeaf, Dickson) | Disease groups (§226, Corrected Copy) | Vaccines | Disease-row note | Shiro |
+|---|---|---|---|---|---|---|---|
+| 1 | Plain number, no suffix | 0.1 — on his line; below lab line | 0.7 | M, P, B, Ob | PPSV23, PCV13, PCV15, PCV20 | Meningitis-watch [H]; epidemic serotype, rarely carried, documented non-carrier [D]; capsule thickens under stress [D] | PENDING |
+| 2 | Plain number, no suffix | 0.3 — ≥0.2 group; below lab line | <0.3 | Ob, Ar | PPSV23 only | Archive; D39 laboratory workhorse strain [D]; PPSV23-only with 20 [D]; biofilm/carriage data thin [GAP] | PENDING |
+| 3 | Plain number, no suffix | <0.1 — below his line; below lab line | 0.3 | M, P, O, B, Ob, Pe | All five (PPSV23, PCV13, PCV15, PCV20, PCV21) | Persister; six groups, among the widest [D]; capsule shedding; strongest biofilm architecture; biofilm-five with staph [D]; PSSP 100% [D] | PENDING |
+| 4 | Plain number, no suffix | 0.1 — on his line; below lab line | <0.3 | M, P, B, Ob | PPSV23, PCV13, PCV15, PCV20 | Meningitis-watch [H]; virus-gated — flu amplification: pneumonia 58→100%, bacteremia 21→90%, mortality 0→79% [D] | PENDING |
+| 5 | Plain number, no suffix | <0.1 — below his line; below lab line | 0.4 | Ob | PPSV23, PCV13, PCV15, PCV20 | Meningitis-watch [H]; Outbreak only — narrowest membership [D]; "the one labeled outbreak" (recommendation, labeled mine in the book) | PENDING |
+| 6B | Serogroup 6, suffix B | 0.1 — on his line; below lab line | 0.4 | O, C, R | PPSV23, PCV13, PCV15, PCV20 | Carriage specialist, longest residence [D]; classic MDR, Spain6B-2 [D]; PCV7 clearance → staph nasal colonization doubled [D] | PENDING |
+| 7F | Serogroup 7, suffix F | 0.2 — ≥0.2 group; below lab line | 1.5 | M, Ob, Pe | All five (PPSV23, PCV13, PCV15, PCV20, PCV21) | Persister without armor [H]; vaccine-failure serotype despite all-five inclusion [D] | PENDING |
+| 8 | Plain number, no suffix | 0.7 — ≥0.2 group; below lab line | 1.0 | P, Ob, R (watchlist), Re | PPSV23, PCV20, PCV21 | Replacement, predicted [H]; Resistant-watchlist [D]; invasion, not carriage [D] | PENDING |
+| 9N | Serogroup 9, suffix N | 0.1 — on his line; below lab line | <0.3 | B, Re, Ar | PPSV23, PCV21 | Orphan rescue with 17F [H]; coat-change mechanic — clones wearing multiple capsules incl. 9N [D] | PENDING |
+| 9V | Serogroup 9, suffix V | 0.4 — ≥0.2 group; below lab line | 1.0 | O, R | PPSV23, PCV13, PCV15, PCV20 | Ear serotype [D]; classic MDR, ST-156 [D]; biofilm Group II [D] | PENDING |
+| 10A | Serogroup 10, suffix A | 1.6 — above lab line (only one ≥1.0, Oct 2025); ≥0.2 group | 10.7 | Re (susceptible counterweight) | PPSV23, PCV20, PCV21 | Only value above the lab line, Oct 2025 [D — arithmetic]; susceptible counterweight in Replacement [D]; severe pediatric IPD with 0% resistance [D] | PENDING |
+| 11A | Serogroup 11, suffix A | 0.1 — on his line; below lab line | <0.3 | O, C, R, Re | PPSV23, PCV20, PCV21 | Second coat-change, CC156 capsular switching [D]; MDR [D] | PENDING |
+| 12F | Serogroup 12, suffix F | 0.1 — on his line; below lab line | 0.5 | M, P, B, Ob, Re | PPSV23, PCV20, PCV21 | Meningitis-watch [H]; eruption-without-carriage; hyperinvasive, failure at carriage [D]; closed-setting waves [D] | PENDING |
+| 14 | Plain number, no suffix | 0.1 — on his line; below lab line | 0.4 | M, P, O, B, C, Ob, R (7) | PPSV23, PCV13, PCV15, PCV20 | Seven groups, tied most with 23F post-ruling [D]; meningitis-watch [H]; dual carriage+invasive strategy [D]; classic MDR CC230 [D]; biofilm-five with staph [D] | PENDING |
+| 15B | Serogroup 15, suffix B | 0.4 — ≥0.2 group; below lab line | 1.5 | M, O, C, R (moderate), Re | PPSV23, PCV20, PCV21 | Resistant-moderate [D]; meninges-leaning, Belgian note [D]; replacement that arrived armed [D] | PENDING |
+| 17F | Serogroup 17, suffix F | 0.2 — ≥0.2 group; below lab line | <0.3 | M, Re, Ar | PPSV23, PCV21 | Rescue pair with 9N [H]; lowest-confidence entry — only documented case neonatal meningitis [D]; rest [GAP] | PENDING |
+| 18C | Serogroup 18, suffix C | 0.5 — ≥0.2 group; below lab line | 1.1 | M, P, O, B | PPSV23, PCV13, PCV15, PCV20 | Shelter without armor [H]; biofilm-five with staph, 0% resistance [D]; ICI-class [D] | PENDING |
+| 19A | Serogroup 19, suffix A | 0.3 — ≥0.2 group; below lab line | 0.6 | P, O, B, R, Pe | All five (PPSV23, PCV13, PCV15, PCV20, PCV21) | 19 = human part [H]; post-PCV7 replacement; MDR ST320; evolved from 19F clone by capsular switch [D]; persister [D] | PENDING |
+| 19F | Serogroup 19, suffix F | 0.3 — ≥0.2 group; below lab line | 1.6 | P, O, C, R, Pe | PPSV23, PCV13, PCV15, PCV20 | 19 = human part [H]; carriage specialist; classic MDR; ancestor of 19A lineage [D]; biofilm workshop, 55× cps variants [D] | PENDING |
+| 20 | Plain number, no suffix | 0.3 — ≥0.2 group; below lab line | <0.3 | Ob, Ar | PPSV23 only | Archive; PPSV23-only with 2 [D]; PCV21's 20A ≠ 20, cross-protection unestablished [GAP]; modern profile thin [GAP] | PENDING |
+| 22F | Serogroup 22, suffix F | 0.3 — ≥0.2 group; below lab line | 2.5 | P, Re (susceptible counterweight) | PPSV23, PCV15, PCV20, PCV21 | Susceptible counterweight [D]; clean replacement, 8.2% adult IPD, 0% resistance; PPSV23 effectiveness 88% Denmark [D] | PENDING |
+| 23F | Serogroup 23, suffix F | 0.1 — on his line; below lab line | 0.7 | M, P, O, B, C, Ob, R (7) | PPSV23, PCV13, PCV15, PCV20 | Seven groups post-ruling [D]; carriage king [D]; classic MDR Spain23F-1 [D]; biofilm Group I second-strongest [D]; NOT in staph biofilm-five — missing experiment [GAP] | PENDING |
+| 33F | Serogroup 33, suffix F | 0.5 — ≥0.2 group; below lab line | 0.6 | R (erythromycin), Re | PPSV23, PCV15, PCV20, PCV21 | Resistant-erythromycin, 100% nonsusceptible [D]; pediatric post-PCV13 deaths driver [D]; armor-with-gaps, ceftriaxone 0% [D] | PENDING |
+
+**Group key:** M meningitis · P pneumonia · O otitis · B bacteremia · C carriage · Ob outbreak · R resistant · Pe persister · Re replacement · Ar archive. Group lists and reverse index from the Corrected Copy (2026-10-29), which carries the Oct 29 ruling. Counts: M 10 · P 10 · O 10 · B 9 · C 6 · Ob 11 · R 10 · Pe 4 · Re 9 · Ar 4.
+
+**Counts restated as arithmetic [D]:** on his line exactly (0.1, Oct 2025): 1, 4, 6B, 9N, 11A, 12F, 14, 23F — 8. In his ≥0.2 group (Oct 2025): 2, 7F, 8, 9V, 10A, 15B, 17F, 18C, 19A, 19F, 20, 22F, 33F — 13. Below his line (<0.1, Oct 2025): 3, 5 — 2. Above the lab's line (≥1.0, Oct 2025): 10A only — 1. Meningitis-watch four (1, 5, 12F, 14): none reaches 0.2 on the Oct 2025 panel [D — arithmetic]. In all five vaccines: 3, 7F, 19A — 3. In PPSV23 only: 2, 20 — 2. In PCV21 but not the earlier conjugates (rescue pair): 9N, 17F — 2; 20A is not 20.
+
+## Part II — The 5 meningococcal letter groups
+
+*Neisseria meningitidis* serogroups. Capsule chemistry decides vaccine coverage in this system too [D] — which is why the lettering is not arbitrary here either. **Boundary, stated plainly: NO serogroup maps to any serotype.** This part cross-references by showing and capsule logic only.
+
+| Serogroup | Capsule chemistry | Vaccine coverage | Meningitis showing | Carriage / Resistance / Persister / Replacement / Otitis / Bacteremia / Pneumonia | Shiro |
+|---|---|---|---|---|---|
+| A | Capsular polysaccharide [D] | MenACWY, MenABCWY [D] | Classic bacterial meningitis agent; meningitis is its defining showing [D] | GAP — no meningococcal-side grouping in his works | PENDING |
+| B | Polysaccharide mimics human tissue (NCAM) [H→D]; poorly immunogenic [D] | MenB recombinant protein, MenABCWY [D] | Classic bacterial meningitis agent; meningitis is its defining showing [D] | GAP — no meningococcal-side grouping in his works | PENDING |
+| C | Capsular polysaccharide [D] | MenACWY, MenABCWY [D] | Classic bacterial meningitis agent; meningitis is its defining showing [D] | GAP — no meningococcal-side grouping in his works | PENDING |
+| W | Capsular polysaccharide [D] | MenACWY, MenABCWY [D] | Classic bacterial meningitis agent; meningitis is its defining showing [D] | GAP — no meningococcal-side grouping in his works | PENDING |
+| Y | Capsular polysaccharide [D] | MenACWY, MenABCWY [D] | Classic bacterial meningitis agent; meningitis is its defining showing [D] | GAP — no meningococcal-side grouping in his works | PENDING |
+
+**The B exception, stated once:** the B polysaccharide is poorly immunogenic, so protein antigens are used instead of a conjugate [D] — that is why MenB is a recombinant protein vaccine while MenACWY is a conjugate. The Most Advanced Table's meningococcal disease row carries these serogroups with empiric ceftriaxone/cefotaxime [D] — the only disease-row content naming them.
+
+## Flags — inconsistencies found, NOT silently fixed
+
+1. **23F's group count — RESOLVED Oct 29, 2026 by Douglas's ruling** (principle: all pneumonia serotypes belong in the pneumonia group once, by kind): the Serology book's 23F entry lists six groups (M, O, B, C, Ob, R — no Pneumonia) and itself flagged the "seven" vs six mismatch as written. The Corrected Copy carries the resolution: 23F in 7 groups including Pneumonia; pneumonia group now 10 serotypes. This table follows the Corrected Copy.
+2. **Cross-reference staleness:** the Meningococcal × Pneumococcal Cross-Reference's Part I dimension table still lists the pneumonia group as 9 serotypes (pre-ruling). Its own Part III already notes the resolution, and the Corrected Copy supersedes the count. Source untouched; flagged here, not fixed there.
+3. **PCV21 list count:** the Serology book's PCV21 list as written contains 22 entries for a 21-valent vaccine and omits 14. Followed as written (the book wins per the brief) — and the book's per-serotype entries consistently say 14: Not PCV21, so this table follows the book. The count discrepancy is flagged, not fixed, and no web check was used (no inter-source conflict to resolve — the book is internally consistent on 14's exclusion).
+4. **Book's 14 phrasing predates the ruling:** the book's 14 entry says "seven groups, with 23F the most" — post-ruling, 14 and 23F tie at 7 groups each.
+5. **Systematic GAP — disease-row→serotype detail:** the Most Advanced Table's disease rows do not break down to individual pneumococcal serotypes (only "23 pneumo serotypes (Part II)" ×2, Lancefield Groups A/B, and meningococcal serogroups A/B/C/W/Y). Serotype-level notes in Part I therefore come from §226 group qualifiers and the Serology book's Part 2, not from disease rows. Where neither source speaks, the cell is GAP.
+6. **Shiro column:** PENDING on every data row (23 + 5 = 28). Nothing invented, nothing guessed. It fills when he defines Shiro.
+7. **Two panels, not one series:** see the filing note above Part I. The Oct 2026 panel is marked "Not yet reviewed by care team" in its source document.
+
+## Provenance
+
+- **Disease groups (Part I) and reverse index:** The Most Advanced Serotype Disease Table — Corrected Copy (2026-10-29), from Serotype Groups by Disease Group (§226, 2026-10-18), including the Oct 29 ruling (pneumonia 9 → 10, 23F 6 → 7 groups). The Oct 28 original was checked for Part I disease-row context only; it carries no per-serotype breakdown beyond "23 pneumo serotypes (Part II)."
+- **Oct 2025 values, vaccine lists, per-serotype notes, element grid:** The Serology Cross-Reference Book (2026-10-24) — PN23M panel collected Oct 29, 2025, ordered by Rick Klein, D.O., lab normal ≥1.0 mcg/mL; PPSV23/PCV13/PCV15/PCV20/PCV21 lists verified against the book's lists and vaccine grid; every value and list in this table was checked against the book, and where the book disagrees with earlier briefs (23F groups, PCV21 count), the book is followed and the disagreement flagged above.
+- **Part II (meningococcal):** Meningococcal × Pneumococcal Serotype Cross-Reference (2026-10-28) — capsule chemistry, MenACWY/MenB/MenABCWY coverage, the no-mapping boundary, and the GAP cells where his works hold no meningococcal-side grouping.
+- **Oct 2026 values:** `~/workspace/user/files/quest23seroMyChart_-_Test_Details_0_h546.pdf` — STREPTOCOCCUS PNEUMONIAE AB (IGG) (23 SEROTYPES), collected Oct 26, 2026 3:52 PM, ordered by Erik Dickson, MD, result date Oct 29, 2026 7:47 PM, status Final, resulting lab LABDAQ (OAKLEAF CLINICS), Quest MAID/Luminex method, mcg/mL, marked "Not yet reviewed by care team." Every value verified against the PDF itself: 1: 0.7 · 2: <0.3 · 3: 0.3 · 4: <0.3 · 5: 0.4 · 6B: 0.4 · 7F: 1.5 · 8: 1.0 · 9N: <0.3 · 9V: 1.0 · 10A: 10.7 · 11A: <0.3 · 12F: 0.5 · 14: 0.4 · 15B: 1.5 · 17F: <0.3 · 18C: 1.1 · 19A: 0.6 · 19F: 1.6 · 20: <0.3 · 22F: 2.5 · 23F: 0.7 · 33F: 0.6. Quest analyte numbers in the file (26/34/43/51/54/56/57/68/70) map to serotypes 6B/10A/11A/7F/15B/18C/19A/9V/33F respectively. Transcribed only — no comparison, no clinical meaning stated.
+- **Oct 29 23F ruling:** Douglas's principle — all pneumonia serotypes belong in the pneumonia group once, by kind — conditional on CDC information and scientific cross-referencing, both met (PCV13 indicated for pneumonia/invasive disease including 23F; CAP 8/70; urinary-antigen 21 episodes; non-bacteremic 5/272).
+- **Sources untouched:** the Oct 28 original, the Corrected Copy, the Serology book, the cross-reference, and the Quest PDF stand exactly as they were. This file is new and sits alongside them.
+- **Organizing idea (serotype-first, letters first, then all information):** Douglas's commission, Oct 30, 2026; the second value column added on his tap the same morning.

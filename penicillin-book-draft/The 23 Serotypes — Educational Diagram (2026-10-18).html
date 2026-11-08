@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 23 Serotypes — Vaccines, Chemistries, Diagnoses</title>
+<style>
+  :root{
+    --ink:#1c2430; --muted:#5b6675; --paper:#fbfaf7; --card:#ffffff;
+    --line:#e6e1d6; --accent:#8a5a17;
+    --gA:#b3402e; --gB:#2e6fb3; --gC:#7a4fa3; --gD:#1f7a5c;
+    --gE:#b3781f; --gF:#6b7280; --gG:#0e7c86;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;padding:0 0 64px}
+  header{padding:28px 20px 18px;border-bottom:3px solid var(--ink);max-width:960px;margin:0 auto}
+  header h1{margin:0 0 6px;font-size:1.5rem;letter-spacing:.2px}
+  header p{margin:4px 0;color:var(--muted);font-size:.95rem}
+  .howto{max-width:960px;margin:14px auto 0;padding:12px 20px;font-size:.9rem;color:var(--muted)}
+  main{max-width:960px;margin:0 auto;padding:0 20px}
+  h2{font-size:1.15rem;margin:34px 0 4px}
+  .sub{color:var(--muted);font-size:.88rem;margin:0 0 14px}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 18px}
+  .filters button{border:2px solid var(--ink);background:#fff;border-radius:999px;
+    padding:7px 14px;font-size:.85rem;font-weight:600;cursor:pointer}
+  .filters button.on{background:var(--ink);color:#fff}
+  .vaccines{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+  .vac{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--accent);
+    border-radius:10px;padding:12px 14px}
+  .vac h3{margin:0 0 2px;font-size:1rem}
+  .vac .yr{font-size:.78rem;color:var(--muted)}
+  .vac p{font-size:.83rem;margin:8px 0 0}
+  .vac .count{font-weight:700}
+  .groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}
+  .grp{background:var(--card);border:1px solid var(--line);border-top:6px solid #999;
+    border-radius:10px;padding:12px 14px}
+  .grp h3{margin:0 0 2px;font-size:1rem}
+  .grp .why{font-size:.82rem;color:var(--muted);margin:6px 0}
+  .grp .dx{font-size:.83rem;margin:8px 0 0}
+  .grp .dx b{font-weight:700}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .chip{display:inline-block;min-width:34px;text-align:center;padding:5px 9px;border-radius:8px;
+    background:#eef1f5;border:1px solid #d4dae2;font-weight:700;font-size:.85rem;
+    transition:opacity .2s,transform .15s}
+  .chip small{display:block;font-weight:400;font-size:.68rem;color:var(--muted)}
+  .chip.dim{opacity:.18}
+  .gA{border-top-color:var(--gA)} .gB{border-top-color:var(--gB)} .gC{border-top-color:var(--gC)}
+  .gD{border-top-color:var(--gD)} .gE{border-top-color:var(--gE)} .gF{border-top-color:var(--gF)}
+  .gG{border-top-color:var(--gG)}
+  .chem{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .chem li{font-size:.9rem;margin:7px 0}
+  .dxmap{width:100%;border-collapse:collapse;font-size:.88rem;background:var(--card)}
+  .dxmap th,.dxmap td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  .dxmap th{background:#f1ede2}
+  footer{max-width:960px;margin:34px auto 0;padding:14px 20px;font-size:.8rem;color:var(--muted);
+    border-top:1px solid var(--line)}
+  .tag{font-weight:700}
+</style>
+</head>
+<body>
+<header>
+  <h1>The 23 Serotypes — Vaccines, Chemistries, Diagnoses</h1>
+  <p>An educational pictogram built from the vaccines' own information: which serotypes each vaccine carries, how the 23 group by documented behavior, and which diagnoses each group maps to.</p>
+</header>
+<p class="howto"><b>How to read it:</b> tap a vaccine button to light up only the serotypes it contains. Serotypes appear in more than one group — that overlap is real, not an error. Groupings are AI-proposed from the documented record, with the reasoning shown on each card.</p>
+
+<main>
+  <h2>1 · The four vaccines</h2>
+  <p class="sub">Compositions verified against manufacturer and AAP listings.</p>
+  <div class="filters" id="vacFilters">
+    <button data-v="all" class="on">All 23</button>
+    <button data-v="ppsv23">PPSV23</button>
+    <button data-v="pcv15">PCV15</button>
+    <button data-v="pcv20">PCV20</button>
+    <button data-v="pcv21">PCV21</button>
+  </div>
+  <div class="vaccines">
+    <div class="vac">
+      <h3>PPSV23 <span class="yr">· 1983 · plain polysaccharide</span></h3>
+      <p><span class="count">23 serotypes</span> — the full set. Unconjugated sugar; no carrier protein.</p>
+    </div>
+    <div class="vac">
+      <h3>PCV15 <span class="yr">· 2021 · conjugate</span></h3>
+      <p><span class="count">15 serotypes</span> — sugars linked to CRM197 carrier protein.</p>
+    </div>
+    <div class="vac">
+      <h3>PCV20 <span class="yr">· 2021/23 · conjugate</span></h3>
+      <p><span class="count">20 serotypes</span> — PCV15's set plus 8, 10A, 11A, 12F, 15B.</p>
+    </div>
+    <div class="vac">
+      <h3>PCV21 <span class="yr">· 2024 · conjugate</span></h3>
+      <p><span class="count">21 serotypes</span> — adult-focused; rescues orphans 9N &amp; 17F. Carries <b>20A</b>, not 20.</p>
+    </div>
+  </div>
+
+  <h2>2 · The 23, grouped by documented behavior</h2>
+  <p class="sub">AI-proposed groupings — each card shows its reasoning. A serotype can belong to several groups.</p>
+  <div class="groups">
+
+    <div class="grp gA">
+      <h3>A · The Resistant Core</h3>
+      <div class="chips">
+        <span class="chip" data-v="ppsv23 pcv15 pcv20">6B</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20">9V</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20">14</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20 pcv21">19A</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20">19F</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20">23F</span>
+      </div>
+      <p class="why"><b>Reasoning:</b> these six carry the classic multidrug-resistant clones — Spain6B-2, Spain23F-1, CC230, ST320, 42% MDR in 19F. Associates 11A &amp; 15B (penicillin non-susceptible) orbit this group.</p>
+      <p class="dx"><b>Diagnoses:</b> severe invasive disease, treatment-failure otitis media, meningitis (14).</p>
+    </div>
+
+    <div class="grp gB">
+      <h3>B · Meningitis Watch</h3>
+      <div class="chips">
+        <span class="chip" data-v="ppsv23 pcv15 pcv20">1</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20">5</span>
+        <span class="chip" data-v="ppsv23 pcv20 pcv21">12F</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20">14</span>
+      </div>
+      <p class="why"><b>Reasoning:</b> documented meningitis links — 1 &amp; 5 drove African meningitis-belt epidemics; 12F adult meningitis; 14 meningitis/otitis.</p>
+      <p class="dx"><b>Diagnoses:</b> bacterial meningitis, epidemic meningitis.</p>
+    </div>
+
+    <div class="grp gC">
+      <h3>C · The Persisters</h3>
+      <div class="chips">
+        <span class="chip" data-v="ppsv23 pcv15 pcv20 pcv21">3</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20 pcv21">19A</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20 pcv21">7F</span>
+      </div>
+      <p class="why"><b>Reasoning:</b> the ones the vaccines keep including and failing to stop — 3 sheds its capsule to dodge antibodies; 19A arrived by capsular switch after PCV7 cleared 19F; 7F shows documented vaccine failures.</p>
+      <p class="dx"><b>Diagnoses:</b> breakthrough invasive disease, empyema (3: 76% of childhood empyema despite vaccination).</p>
+    </div>
+
+    <div class="grp gD">
+      <h3>D · Emerging IPD</h3>
+      <div class="chips">
+        <span class="chip" data-v="ppsv23 pcv20 pcv21">8</span>
+        <span class="chip" data-v="ppsv23 pcv20 pcv21">10A</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20 pcv21">22F</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20 pcv21">33F</span>
+      </div>
+      <p class="why"><b>Reasoning:</b> the post-PCV13 risers — 8 is 10% of adult IPD ≥65; 22F, 33F, 10A emerging invasive disease.</p>
+      <p class="dx"><b>Diagnoses:</b> adult invasive pneumococcal disease, pneumonia (8).</p>
+    </div>
+
+    <div class="grp gE">
+      <h3>E · Ear &amp; Carriage</h3>
+      <div class="chips">
+        <span class="chip" data-v="ppsv23 pcv15 pcv20">6B</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20">9V</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20">14</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20">19F</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20">23F</span>
+      </div>
+      <p class="why"><b>Reasoning:</b> the classic otitis-media and carriage serotypes — the ones children's ears knew first.</p>
+      <p class="dx"><b>Diagnoses:</b> otitis media, nasopharyngeal carriage.</p>
+    </div>
+
+    <div class="grp gF">
+      <h3>F · The Orphans</h3>
+      <div class="chips">
+        <span class="chip" data-v="ppsv23">2</span>
+        <span class="chip" data-v="ppsv23">20</span>
+        <span class="chip" data-v="ppsv23 pcv21">9N</span>
+        <span class="chip" data-v="ppsv23 pcv21">17F</span>
+      </div>
+      <p class="why"><b>Reasoning:</b> skipped by the early conjugates — 2 &amp; 20 live in PPSV23 only; 9N &amp; 17F were rescued by PCV21 in 2024.</p>
+      <p class="dx"><b>Diagnoses:</b> adult IPD (9N), outbreak lists (2, 20).</p>
+    </div>
+
+    <div class="grp gG">
+      <h3>G · Biofilm-Tested Five</h3>
+      <div class="chips">
+        <span class="chip" data-v="ppsv23 pcv15 pcv20 pcv21">3</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20">14</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20">18C</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20">19F</span>
+        <span class="chip" data-v="ppsv23 pcv15 pcv20 pcv21">19A</span>
+      </div>
+      <p class="why"><b>Reasoning:</b> the exact five in the mixed <i>S. aureus</i> biofilm study — PCV13 serum cut their biofilms but left the staph untouched.</p>
+      <p class="dx"><b>Diagnoses:</b> biofilm-associated persistence; polymicrobial infection.</p>
+    </div>
+
+  </div>
+  <p class="sub" style="margin-top:10px">Not in a behavior group: serotype 4 — a PCV7-era invasive-disease serotype from before the replacement era; it sits outside the clusters above.</p>
+
+  <h2>3 · The chemistry each group stands on</h2>
+  <p class="sub">A serotype <b>is</b> its capsule-sugar chemistry — documented. Per-serotype sugar blueprints beyond this are open.</p>
+  <div class="chem"><ul>
+    <li><b>Group C's trick:</b> serotype 3 sheds its capsule polysaccharide off the membrane, inhibiting antibody killing — chemistry as evasion.</li>
+    <li><b>19F → 19A:</b> a capsular <i>switch</i> — the MDR clone kept its resistance genes and changed its sugar coat (Taiwan19F-ST236 → 19A-ST320).</li>
+    <li><b>Conjugates:</b> capsule sugar linked to CRM197 protein — the sugar alone (PPSV23) vs. sugar-plus-protein (PCVs) is the chemistry difference between the generations.</li>
+    <li><b>Manufacturing:</b> every pneumococcal vaccine's polysaccharides are grown in soy-based media — soy broth upstream of every capsule in every vial.</li>
+    <li><b>20 vs 20A:</b> PCV21 carries 20A; cross-protection against serotype 20 is not established — one sugar tweak, open question.</li>
+  </ul></div>
+
+  <h2>4 · Diagnosis map</h2>
+  <p class="sub">Which groups each diagnosis draws from.</p>
+  <table class="dxmap">
+    <tr><th>Diagnosis</th><th>Groups</th></tr>
+    <tr><td>Bacterial meningitis</td><td><b>B</b> Meningitis Watch (1, 5, 12F, 14)</td></tr>
+    <tr><td>Otitis media</td><td><b>E</b> Ear &amp; Carriage</td></tr>
+    <tr><td>Pneumonia / adult IPD</td><td><b>D</b> Emerging IPD; <b>A</b> Resistant Core in severe cases</td></tr>
+    <tr><td>Breakthrough disease despite vaccination</td><td><b>C</b> The Persisters (3, 19A)</td></tr>
+    <tr><td>Empyema</td><td><b>C</b> — serotype 3 dominates childhood empyema post-vaccine</td></tr>
+    <tr><td>Bacteremia</td><td>Invasive disease broadly — <b>A</b>, <b>B</b>, <b>D</b></td></tr>
+    <tr><td>Polymicrobial / biofilm infection</td><td><b>G</b> Biofilm-Tested Five (+ <i>S. aureus</i>, untouched by PCV13 serum)</td></tr>
+  </table>
+</main>
+
+<footer>
+  Educational material for <i>The Mycelial Transposition</i> — built from the vaccines' own published information, never medical advice.
+  Groupings are AI-proposed from the documented record with reasoning shown; per-serotype sugar blueprints beyond what's listed are open questions.
+  Serotype 10A is the lone panel value above 1.0 mcg/mL in Douglas's quoted numbers — values shown nowhere here, interpretation belongs to his clinician.
+</footer>
+
+<script>
+  const btns = document.querySelectorAll('#vacFilters button');
+  const chips = document.querySelectorAll('.chip');
+  btns.forEach(b => b.addEventListener('click', () => {
+    btns.forEach(x => x.classList.remove('on'));
+    b.classList.add('on');
+    const v = b.dataset.v;
+    chips.forEach(c => {
+      c.classList.toggle('dim', v !== 'all' && !c.dataset.v.split(' ').includes(v));
+    });
+  }));
+</script>
+</body>
+</html>
